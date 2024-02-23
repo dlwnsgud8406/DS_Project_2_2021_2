@@ -13,20 +13,22 @@ private:
 	int			order;		// m children
 
 public:
-	BpTree(int order = 3){
+	BpTree(int order = 3){//constructor(first setting)
 		root = NULL;
 		this->order = order;
 	}
-
-	bool		Insert(VaccinationData* newData);
-	bool		exceedDataNode(BpTreeNode* pDataNode);
-	bool		exceedIndexNode(BpTreeNode* pIndexNode);
-	void		splitDataNode(BpTreeNode* pDataNode);
-	void		splitIndexNode(BpTreeNode* pIndexNode);
+	~BpTree(){
+		
+	}
+	bool		Insert(VaccinationData* newData); //insert node
+	bool		exceedDataNode(BpTreeNode* pDataNode); // check exceeddatanode
+	bool		exceedIndexNode(BpTreeNode* pIndexNode); //check exceedindexnode
+	void		splitDataNode(BpTreeNode* pDataNode); //split datanode
+	void		splitIndexNode(BpTreeNode* pIndexNode);//split indexnode
 	BpTreeNode*	searchDataNode(string n); //search VaccinationData node
-	void	SearchRange(string start, string end);
-	void	Print(); // print all 
-
+	bool	SearchRange(string start, string end);// search range and write log.txt
+	void	Print(); // print all
+	int count=0;
 };
 
 #endif

@@ -10,23 +10,23 @@ private:
 	BpTreeNode* pPrev;
 
 public:
-	BpTreeDataNode(){
+	BpTreeDataNode(){//constructor
 	}
-	~BpTreeDataNode(){
+	~BpTreeDataNode(){//destructor
 	}
-	void setNext(BpTreeNode* pN){pNext = pN;}
-	void setPrev(BpTreeNode* pN){pPrev = pN;}
-	BpTreeNode* getNext(){return pNext;}
-	BpTreeNode* getPrev(){return pPrev;}
+	void setNext(BpTreeNode* pN){pNext = pN;}//setnextnode
+	void setPrev(BpTreeNode* pN){pPrev = pN;}//setprevnode
+	BpTreeNode* getNext(){return pNext;}//return nextnode
+	BpTreeNode* getPrev(){return pPrev;}//return prevnode
 
-	void insertDataMap(string n, VaccinationData* pN){
-		mapData.insert(map<string, VaccinationData*>::value_type(n,pN));
+	void insertDataMap(string n, VaccinationData* pN){//insert data map
+		mapData.insert(map<string, VaccinationData*>::value_type(n,pN));//inserting
 	}
 
-	void deleteMap(string n){
-		mapData.erase(n);
+	void deleteMap(string n){//delete
+		mapData.erase(n);//find node that has n and erase
 	}
-	map<string, VaccinationData*> *getDataMap(){return &mapData;}
+	map<string, VaccinationData*> *getDataMap(){return &mapData;}//return data map
 };
 
 #endif

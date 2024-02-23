@@ -5,19 +5,20 @@
 #include "AVLNode.h"
 /* class AVL */
 
-class AVLTree{
+class AVLTree{//class of AVL Tree
 private:
-	AVLNode*	root;
+	AVLNode*	root;//root
 
 public:
 	
-	AVLTree(){
+	AVLTree(){//constructor(first setting)
 		root=NULL;
 	}
-	~AVLTree(){};
-	bool		Insert(VaccinationData* pVac);
-	VaccinationData*	Search(string name);
-	void GetVector(vector<VaccinationData*>& v);
+	~AVLTree(){
+	};//destructor
+	bool		Insert(VaccinationData* pVac);//insert to AVL Tree from pVac(Vaccination node)
+	VaccinationData*	Search(string name);//fucntion to search name from AVL Tree
+	void GetVector(vector<VaccinationData*>& v);//make vector
 };
 
 #endif

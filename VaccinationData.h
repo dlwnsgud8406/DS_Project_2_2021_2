@@ -23,25 +23,25 @@ private:
 	int times; // The number of vaccination
 
 public:
-	VaccinationData() {
+	VaccinationData() {//Constuctor (first setting)
 		LocationName = "";
 		UserName = "";
 		times = 0;
 	}
-	~VaccinationData() {
+	~VaccinationData() {//destructor
 
 	}
 	//--NODE information in--
-	void SetUserName(string in_name) { UserName = in_name; }
-	void SetVaccineName(string in_name) { VaccineName = in_name; }
-	void SetLocationName(string in_location) { LocationName = in_location; }
-	void SetTimes(int in_times) { times = in_times; }
-	void SetAge(int in_age) { age = in_age; }
-	void SetTimesInc() { times++; }
+	void SetUserName(string in_name) { UserName = in_name; }//set user name
+	void SetVaccineName(string in_name) { VaccineName = in_name; }//set vaccine name
+	void SetLocationName(string in_location) { LocationName = in_location; }//set location name
+	void SetTimes(int in_times) { times = in_times; }//set times(got a shot)
+	void SetAge(int in_age) { age = in_age; }//set age
+	void SetTimesInc() { times++; }//set times + 1
 
-	string GetUserName() { return UserName; }
-	string GetVaccineName() { return VaccineName; }
-	string GetLocationName() { return LocationName; }
-	int GetTimes() { return times; }
-	int GetAge() { return age; }
+	string GetUserName() { return UserName; }//return username
+	string GetVaccineName() { return VaccineName; }//return vaccine name
+	string GetLocationName() { return LocationName; }//return location name
+	int GetTimes() { return times; }//return times got a shot
+	int GetAge() { return age; }//return age
 };

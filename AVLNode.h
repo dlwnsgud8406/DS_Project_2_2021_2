@@ -3,31 +3,31 @@
 
 #include "VaccinationData.h"
 
-class AVLNode
+class AVLNode//class of ALVNode
 {
 private:
-	AVLNode*			pRight;
-	AVLNode*			pLeft;
-	VaccinationData*	pVaccinationData;
-	int					mBF;
+	AVLNode*			pRight;//right node
+	AVLNode*			pLeft;//left node
+	VaccinationData*	pVaccinationData;//vaccinationdata node
+	int					mBF;//balance factor
 
 public:
-	AVLNode(){
+	AVLNode(){//constructor(first setting)
 		pRight = NULL;
 		pLeft = NULL;
 		pVaccinationData = NULL;
 		mBF = 0;
 	};
-	~AVLNode(){};
+	~AVLNode(){};//destructor
 
-	void setRight(AVLNode* SN){pRight = SN;}
-	void setLeft(AVLNode* SN){pLeft = SN;}
-	void setVacData(VaccinationData* pVac){ pVaccinationData = pVac;}
-	void setBF(int a){mBF = a;}
-	AVLNode*	getRight(){return pRight;}
-	AVLNode*	getLeft(){return pLeft;}
-	VaccinationData*	getVacData(){return pVaccinationData;}
-	int				getBF(){return mBF;}
+	void setRight(AVLNode* SN){pRight = SN;}//setting rightnode
+	void setLeft(AVLNode* SN){pLeft = SN;}//setting leftnode
+	void setVacData(VaccinationData* pVac){ pVaccinationData = pVac;}//set vaccinationdata node
+	void setBF(int a){mBF = a;}//set balance factor
+	AVLNode*	getRight(){return pRight;}//return right node
+	AVLNode*	getLeft(){return pLeft;}//return left node
+	VaccinationData*	getVacData(){return pVaccinationData;}//return vaccinationdata node
+	int				getBF(){return mBF;}//return balancefactor
 };
 
 #endif
